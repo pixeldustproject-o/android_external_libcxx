@@ -50,6 +50,13 @@ cc_library_static {
         "src/valarray.cpp",
         "src/variant.cpp",
     ],
+
+    arch: {
+        arm: {
+            instruction_set: "arm",
+        },
+    },
+
     local_include_dirs: ["include"],
     export_include_dirs: ["include"],
     cppflags: [
@@ -117,6 +124,12 @@ cc_library_shared {
                 "libdl",
                 "liblzma",
             ],
+        },
+    },
+
+    arch: {
+        arm: {
+            instruction_set: "arm",
         },
     },
 }
